@@ -15,7 +15,7 @@ def perform_query():
 	try:
 		valid_data = PackageRequestSchema().load(data)
 	except ValidationError as error:
-		# в ответе вернется json с номером элемента списка queriesб в котором допущена ошибка
+		# в ответе вернется json с номером элемента списка queries, в котором допущена ошибка
 		return jsonify(error.messages), 400
 
 	# выполняем запрос
